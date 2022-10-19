@@ -8,7 +8,7 @@ export type Arrayable<T> = T | T[]
 export type ArgumentType<T> = T extends ((...args: infer A) => any) ? A : never
 export type Shift<T> = T extends [_: any, ...args: infer A] ? A : never
 export type RestArgs<T> = Shift<ArgumentType<T>>
-export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> }
+export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> | ((original?: DeepPartial<T[P]>) => DeepPartial<T[P]>) }
 export type FlatObjectTuple<T> = { [K in keyof T]: T[K] }
 export type PartialByKeys<T, K extends keyof T = keyof T> = FlatObjectTuple<Partial<Pick<T, Extract<keyof T, K>>> & Omit<T, K>>
 export type RequiredByKey<T, K extends keyof T = keyof T> = FlatObjectTuple<Required<Pick<T, Extract<keyof T, K>>> & Omit<T, K>>
