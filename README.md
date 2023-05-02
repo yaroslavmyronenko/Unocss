@@ -4,7 +4,7 @@
 <img src="https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg" style="width:100px;" />
 </p>
 
-<h1 align="center">UnoCSS</h1>
+<h1 align="center">UnoCSS-test</h1>
 
 <p align="center">
 The instant on-demand Atomic CSS engine.
